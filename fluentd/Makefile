@@ -2,7 +2,7 @@ LOG_INTERVAL = 1
 LOG_DIR := .
 export LOG_INTERVAL LOG_DIR
 
-default:fluentd
+default:log
 
 install:
 	pipenv install
@@ -14,5 +14,4 @@ clean:
 	-rm -rf country
 fluentd:
 	bundle exec fluentd -c fluent.conf
-
 
