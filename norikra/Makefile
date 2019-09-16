@@ -18,9 +18,10 @@ start-server:
 #		  GROUP BY category \
 #		"
 submit-query1:
-	bundle exec norikra-client query add test_query1 "SELECT category,avg(cost),count(*) AS c FROM app_log.win:time_batch(20 sec) GROUP BY category"
-#	bundle exec norikra-client query add test_query1 "SELECT category,avg(cost),min(cost),max(cost),count(*) AS c FROM app_log.win:time_batch(20 sec) GROUP BY category"
+	bundle exec norikra-client query add test_query1 "SELECT avg(cost),max(cost),min(cost),avg(score),min(score),max(score),count(*) AS count FROM app_log.win:time_batch(10 sec) GROUP BY category"
 check-query:
 	bundle exec norikra-client query list
 fetch1:
 	bundle exec norikra-client event fetch test-query1
+fetch-all:
+	bundle exec norikra-client event sweep
