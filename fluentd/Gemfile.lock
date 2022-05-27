@@ -38,7 +38,7 @@ GEM
       msgpack-rpc-over-http (~> 0.1.0)
       thor
     oj (3.9.1)
-    rack (1.6.11)
+    rack (1.6.13)
     serverengine (2.1.1)
       sigdump (~> 0.2.2)
     sigdump (0.2.4)
